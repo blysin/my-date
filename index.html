@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <link rel="icon" href="./favicon.ico">
+    <title>哈哈哈</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" type="text/css" href="./css/lovexhj.css">
+    <link rel="stylesheet" href="./css/swiper.css">
+    <link rel="stylesheet" type="text/css" href="./css/FiraCode.css">
+    <link rel="stylesheet" href="http://i.gtimg.cn/vipstyle/frozenui/2.0.0/css/frozen.css">
+</head>
+
+<body>
+    <!-- 标题板块 -->
+    <div class="title">
+        <img src="./images/bg1.gif" alt="bgGif">
+        <p id="tqyxhj"></p>
+        <button id='think-btn' class="ui-btn-lg ui-btn-primary" onclick="think()">我想想</button>
+    </div>
+
+    <div class="ui-dialog" id='ch-a'>
+        <div class="ui-dialog-cnt">
+            <div class="ui-dialog-bd">
+                <p>晚上一起吃饭哦？</p>
+            </div>
+            <div class="ui-dialog-ft">
+                <button type="button" data-role="button" onclick="sayNo()">不行</button>
+                <button type="button" data-role="button" onclick="sayYes()">走走走！</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui-dialog" id='ch-no'>
+        <div class="ui-dialog-cnt">
+            <div class="ui-dialog-bd">
+                <img src="./images/疑问.png" alt="">
+                <p>你一定是按错了</p>
+            </div>
+            <div class="ui-dialog-ft">
+                <button type="button" data-role="button" onclick="rethink()">是的，我按错了</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui-dialog" id='ch-yes'>
+        <div class="ui-dialog-cnt">
+            <div class="ui-dialog-bd">
+                <p>哈哈，这才乖嘛，马上到</p>
+            </div>
+            <div class="ui-dialog-ft">
+                <button type="button" data-role="button">\(^o^)/~</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 两只XHJ一样的猪 -->
+    <div class="xhjIsPig">
+        <img src="./images/pig1.gif" alt="pig1" class="pig1">
+        <img src="./images/pig2.gif" alt="pig2" class="pig2">
+    </div>
+
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=1 height=1
+        src="//music.163.com/outchain/player?type=2&id=434871406&auto=1&height=32"></iframe>
+
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=1 height=1
+        src="http://test-diting.meiyou.com/api/druid/test/test"></iframe>
+
+    <!-- js加载 -->
+    <script src="https://cdn.bootcss.com/wow/1.1.2/wow.js"></script>
+    <script src="./js/typeit.min.js"></script>
+    <script src="./js/swiper-3.4.2.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="./js/lovetime.js"></script>
+    <script src="./js/talk.js"></script>
+    <script src="./js/swiper.js"></script>
+    <script src="./js/su.js"></script>
+    <script>
+        (function () {
+            new WOW().init()
+        })()
+    </script>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $('body').wpSuperSnow({
+                flakes: ['./images/004.png', './images/003.png', './images/002.png',
+                    './images/001.png'
+                ],
+                totalFlakes: '100',
+                zIndex: '999999',
+                maxSize: '30',
+                maxDuration: '20',
+                useFlakeTrans: false
+            });
+        });
+
+        function think(){
+            $('#ch-a').addClass("show")
+        }
+
+        function rethink(){
+            $('#ch-no').removeClass("show")
+            setTimeout(function(){
+                $('#ch-a').addClass("show")
+            },300)
+        }
+
+        function sayNo(){
+            $('#ch-a').removeClass("show")
+            setTimeout(function(){
+                $('#ch-no').addClass("show")
+            },300)
+        }
+
+        function sayYes(){
+            $('#ch-a').removeClass("show")
+            setTimeout(function(){
+                $('#ch-yes').addClass("show")
+            },300)
+        }
+    </script>
+</body>
+
+</html>
